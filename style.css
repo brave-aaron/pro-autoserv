@@ -1,0 +1,661 @@
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f5;
+    color: #0f0f0f;
+    padding-bottom: 4rem;
+    
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* En-têtes */
+  h1, h2, h3 {
+    margin-bottom: 1rem;
+    color: #111;
+  }
+  
+  /* Header */
+  header {
+    background: #0d47a1;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  /* Hero */
+  .hero {
+    background: linear-gradient(to right, #0d47a1, #1976d2);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Boutons */
+  .btn {
+    display: inline-block;
+    background: #ffca28;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #ffc107;
+  }
+  
+  /* Sections */
+  section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Grille des cartes */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Carte véhicule */
+  .card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    margin-bottom: 1rem;
+  }
+  
+  .card strong {
+    color: #0d47a1;
+    font-weight: bold;
+  }
+  
+  /* Image dans la carte */
+  .card img,
+  .card .car-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .card.details img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  
+  /* Formulaire de contact */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  /* Authentification (connexion/inscription) */
+  .auth-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  
+  .auth-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0d47a1;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .form-group.checkbox label {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Pied de page */
+  footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+  .card.details {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card.details img.car-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .card.details img.car-img:hover {
+    transform: scale(1.05);
+  }
+  .modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .modal-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+  .vehicule-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .vehicule-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+  }
+  
+  .vehicule-card img.car-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .publication-form {
+    max-width: 600px;
+    margin: 2rem auto 4rem;
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .publication-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0d47a1;
+  }
+  
+  .publication-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .publication-form input[type="text"],
+  .publication-form input[type="number"],
+  .publication-form select,
+  .publication-form textarea,
+  .publication-form input[type="file"] {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1.3rem;
+    border: 1.8px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .publication-form input[type="text"]:focus,
+  .publication-form input[type="number"]:focus,
+  .publication-form select:focus,
+  .publication-form textarea:focus,
+  .publication-form input[type="file"]:focus {
+    border-color: #0d47a1;
+    outline: none;
+  }
+  
+  .publication-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .publication-form button.btn {
+    display: block;
+    width: 100%;
+    background-color: #0d47a1;
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .publication-form button.btn:hover {
+    background-color: #1565c0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .publication-form {
+      padding: 1.5rem 1.8rem;
+    }
+  }
+  .vehicule-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .vehicule-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
+    width: 280px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .vehicule-card img.car-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .vehicule-card .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .btn-edit {
+    background-color: #0d47a1;
+    color: white;
+    padding: 0.5rem 1.1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-edit:hover {
+    background-color: #1565c0;
+  }
+  
+  .btn-delete {
+    background-color: #d32f2f;
+    color: white;
+    padding: 0.5rem 1.1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-delete:hover {
+    background-color: #b71c1c;
+  }
+  .dashboard {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .stat-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    width: 250px;
+  }
+  
+  .stat-box h3 {
+    margin-bottom: 1rem;
+    color: #0d47a1;
+  }
+  
+  .stat-box p {
+    font-size: 2rem;
+    color: #222;
+  }
+  .dashboard-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #3498db;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+    background-color: #f2f2f2;
+}
+
+.status-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.status-select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.badge.active {
+    background-color: #27ae60;
+}
+
+.badge.inactive {
+    background-color: #f39c12;
+}
+
+.badge.banni {
+    background-color: #e74c3c;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+/* mon_compte.css */
+
+.compte-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.profil {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profil h2 {
+  font-size: 26px;
+  color: #333;
+}
+
+.vehicules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.vehicule-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.2s ease;
+}
+
+.vehicule-card:hover {
+  transform: translateY(-5px);
+}
+
+.car-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.vehicule-info {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-edit {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.admin-actions {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.deconnexion-box {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: right;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-bottom: 3px solid #007BFF;
+}
+
+.btn-deconnexion {
+  background-color: #dc3545;
+  color: rgb(219, 204, 204);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-deconnexion:hover {
+  background-color: #c82333;
+  text-decoration: none;
+}
+
